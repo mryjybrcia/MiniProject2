@@ -96,7 +96,7 @@ function onSubmit(e) {
   resetPlayButton();
   articleElement.innerHTML = "";
 
-  if (validateInput(formInput.value)) {
+  if (validateInput(formInput.value))  {
     fetchAPIData(formInput.value);
   }
 }
@@ -122,7 +122,7 @@ function resetForm() {
   }
 }
 
-// FETCH DATA
+// DATA FETCH
 
 async function fetchAPIData(searchTerm) {
   const API_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
