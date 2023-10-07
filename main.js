@@ -20,7 +20,7 @@ function initApp() {
   if (currentMode === "dark") {
     document.body.classList = "dark";
   }
-
+  initApp();
   // Get font from local storage
   const currentFont = localStorage.getItem("font");
   changeCurrentFont(currentFont);
@@ -391,4 +391,4 @@ showFontsArrow.addEventListener("click", showHideFontCard);
 fontCard.addEventListener("click", changeFont);
 document.addEventListener("click", hideFontCardOnClickOutside);
 
-initApp();
+
