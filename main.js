@@ -125,7 +125,8 @@ function resetForm() {
 // FETCH DATA
 
 async function fetchAPIData(searchTerm) {
-  const API_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
+  const API_URL =
+    "https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=your-api-key";
 
   const response = await fetch(`${API_URL}${searchTerm}`);
   const data = await response.json();
