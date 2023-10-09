@@ -136,11 +136,8 @@ body.dark {
   display: flex;
   align-items: center;
   gap: 1rem;
-
   position: relative;
-
   padding: 0 1rem 0 0;
-
   border-right: 1px solid var(--clr-light-600);
 }
 
