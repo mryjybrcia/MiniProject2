@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
   </body>
 </html>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
       src="https://kit.fontawesome.com/2eb8bd0a18.js"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <title>Dictionary Web App</title>
   </head>
   <body>
@@ -29,7 +29,7 @@
       <header class="header">
         <a href="index.html" class="header__link"
           ><img
-            src="./images/logo.svg"
+            src="images/logo.svg"
             alt="Dictionary Web App home"
             class="header__logo"
         /></a>
@@ -141,14 +141,11 @@
         <article class="dictionary">
           <section class="word">
             <div class="word__container">
-              <h1 class="word__search-term">Keyboard</h1>
+              <h1 class="word__search-term">Keyboard!</h1>
               <p class="word__phonetic">/ˈkibɔɹd/</p>
             </div>
-            <button type="button" class="word__play-btn" id="play-btn">
-              <audio
-                src="https://api.dictionaryapi.dev/media/pronunciations/en/welcome-uk.mp3"
-                id="audio"
-              ></audio>
+            <button type="button" class="word__play-btn" id="play-btn" disabled>
+              <audio src="" id="audio"></audio>
               <svg
                 class="word__play-svg"
                 xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +222,7 @@
               <h2 class="source__heading">Source</h2>
               <div class="source__link-container">
                 <a href="#" target="_blank" class="source__link"
-                  >https://en.wiktionary.org/wiki/welcome
+                  >https://en.wiktionary.org/wiki/keyboard
                   <span class="sr-only">(opens in a new tab)</span></a
                 >
                 <svg
@@ -251,7 +248,5 @@
         </article>
       </main>
     </div>
-
-    <script src="main.js"></script>
   </body>
 </html>
