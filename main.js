@@ -20,7 +20,7 @@ function initApp() {
   if (currentMode === "dark") {
     document.body.classList = "dark";
   }
-  initApp();
+
   // Get font from local storage
   const currentFont = localStorage.getItem("font");
   changeCurrentFont(currentFont);
@@ -96,7 +96,7 @@ function onSubmit(e) {
   resetPlayButton();
   articleElement.innerHTML = "";
 
-  if (validateInput(formInput.value))  {
+  if (validateInput(formInput.value)) {
     fetchAPIData(formInput.value);
   }
 }
@@ -122,11 +122,10 @@ function resetForm() {
   }
 }
 
-// DATA FETCH
+// FETCH DATA
 
 async function fetchAPIData(searchTerm) {
-  const API_URL =
-    "https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=your-api-key";
+  const API_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
   const response = await fetch(`${API_URL}${searchTerm}`);
   const data = await response.json();
@@ -392,4 +391,4 @@ showFontsArrow.addEventListener("click", showHideFontCard);
 fontCard.addEventListener("click", changeFont);
 document.addEventListener("click", hideFontCardOnClickOutside);
 
-
+initApp();
